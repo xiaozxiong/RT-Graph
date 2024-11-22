@@ -6,8 +6,8 @@
 #include "linear_bfs.cuh"
 
 int main(int argc, char *argv[]) {
-    if (argc != 4) {
-        printf("Usage: ./linear_bfs graph_path chunk_length device_id\n");
+    if (argc != 5) {
+        printf("Usage: ./linear_bfs graph_path chunk_length device_id filter\n");
         exit(1);
     }
     std::string file_path = argv[1];
@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) {
     int device_id = atoi(argv[3]);
     int source_node = 0;
     bool filter = false;
+    filter = (atoi(argv[4]) != 0);
 
     Graph graph;
     graph.ReadMtx(file_path);

@@ -2,8 +2,8 @@
 
 #include <cuda_runtime.h>
 #include <optix.h>
-#include <optix_stack_size.h>
 #include <optix_stubs.h>
+#include <optix_stack_size.h>
 #include <optix_types.h>
 #include <vector>
 
@@ -86,12 +86,18 @@ private:
 
 public:
     RTBFS(Graph &graph, int chunck_length);
+    
     ~RTBFS();
+    
     void SetDevice(int device_id = 0);
+    
     void OptiXSetup();
     // void PrepareRT();
     void BuildAccel(bool if_compact = false);
-    void Traversal(int source_node = 0);
+
+    void Traversal(int source_node = 0, bool filter = true);
+    
     void CheckResult();
+    
     void PrintResult(int head = 40);
 };

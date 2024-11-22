@@ -7,8 +7,6 @@ cuda_compile_and_embed(embedded_ptx_code device_programs.cu)
 add_executable(rt_bfs 
     ${embedded_ptx_code}
     main.cpp
-	# ${CMAKE_CURRENT_SOURCE_DIR}/mmio/mmio.cpp
-	# graph.cpp
 	rt_bfs.cu
 	cuda_helper.cu
 	record.h
@@ -16,7 +14,8 @@ add_executable(rt_bfs
 
 target_compile_options(rt_bfs PRIVATE
 	$<$<COMPILE_LANGUAGE:CXX>:
-	-Wall -Wextra -Wpedantic
+	# -Wall -Wextra -Wpedantic
+	-O3
 	# ${OpenMP_CXX_FLAGS}
 >)
 
@@ -27,7 +26,7 @@ target_compile_options(rt_bfs PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:
 	-O3
 	-Xcompiler=-fopenmp
 	-gencode arch=compute_75,code=sm_75
-	-lineinfo # for profiling
+	# -lineinfo # for profiling
 >)
 
 target_link_libraries(rt_bfs
@@ -51,8 +50,9 @@ add_executable(rt_bfs_v2
 
 target_compile_options(rt_bfs_v2 PRIVATE
 	$<$<COMPILE_LANGUAGE:CXX>:
-	-Wall -Wextra -Wpedantic
+	# -Wall -Wextra -Wpedantic
 	# ${OpenMP_CXX_FLAGS}
+	-O3
 >)
 
 target_compile_options(rt_bfs_v2 PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:

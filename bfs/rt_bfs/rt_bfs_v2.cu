@@ -3,6 +3,8 @@
 #include <iomanip>
 #include <iostream>
 #include <omp.h>
+#include <optix.h>
+#include <optix_stubs.h>
 #include <optix_function_table_definition.h>
 #include <queue>
 
@@ -62,8 +64,8 @@ void RTBFS_V2::CreateModule() {
     pipeline_compile_options_.numAttributeValues = 2;
     pipeline_compile_options_.exceptionFlags = OPTIX_EXCEPTION_FLAG_NONE;
     pipeline_compile_options_.pipelineLaunchParamsVariableName = "params";
-    pipeline_compile_options_.usesPrimitiveTypeFlags =
-        OPTIX_PRIMITIVE_TYPE_FLAGS_TRIANGLE; // scene contains nothing but built-in triangles
+    // scene contains nothing but built-in triangles
+    pipeline_compile_options_.usesPrimitiveTypeFlags = OPTIX_PRIMITIVE_TYPE_FLAGS_TRIANGLE;
 
     const std::string ptx_code = embedded_ptx_code_v2;
     char log[2048];
@@ -512,7 +514,7 @@ void RTBFS_V2::TransferVerticesToDevice(std::vector<float3> &triangle_vertices,
     // number_of_triangle_, cudaMemcpyHostToDevice));
 }
 
-void RTBFS_V2::Traversal(int source_node) {
+void RTBFS_V2::Traversal(int source_node, bool filter) {
     printf("==========>>> Method Info <<<==========\n");
     printf("Total triangles = %d, chunks = %d, adjust = %d, zoom = (%.2f, %.2f, %.2f)\n",
            number_of_triangle_, chunks_, adjust_, zoom_.x, zoom_.y, zoom_.z);
@@ -533,11 +535,10 @@ void RTBFS_V2::Traversal(int source_node) {
     h_params_.encode_digits = encode_digits_;
     h_params_.encode_mod = encode_mod_;
 
-    bool filter = false; //!
     if (filter)
-        printf("----- Using filter\n");
+        printf("----- Filter is used\n");
     else
-        printf("----- Do not use filter\n");
+        printf("----- Filter isn't used\n");
 
     int queue_size = 1;
     CUDA_CHECK(cudaMalloc((void **)&h_params_.origins, sizeof(int) * number_of_origin_));
@@ -579,13 +580,7 @@ void RTBFS_V2::Traversal(int source_node) {
         // TODO:
         CUDA_CHECK(
             cudaMemcpy(&queue_size, h_params_.queue_size, sizeof(int), cudaMemcpyDeviceToHost));
-        // if(h_params_.current_level < 10) {
-        //     printf("queue size = %d\n",queue_size);
-        //     printf("-----------------------------------\n");
-        //     if(h_params_.current_level == 10) break;
-        // }
-        // if(cnt > 1490) printf("---------------------- queue size = %d\n",queue_size);
-        // if(cnt >= 1493) break;
+    
         // printf("---------------------- queue size = %d\n",queue_size);
         if (queue_size == 0)
             break;

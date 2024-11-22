@@ -394,7 +394,7 @@ void RTBFS::TransferVerticesToDevice(std::vector<float3> &triangle_vertices,
                cudaMemcpyHostToDevice);
 }
 
-void RTBFS::Traversal(int source_node) {
+void RTBFS::Traversal(int source_node, bool filter) {
     printf("RT-BFS: RT traversal starts from source node %d(degree = %d)\n", source_node,
            offsets_[source_node + 1] - offsets_[source_node]);
     // set launch params
@@ -406,13 +406,13 @@ void RTBFS::Traversal(int source_node) {
 
     int origins_mem_size = number_of_origin_;
     int queue_mem_size = graph_info_.node_num;
-    bool filter = false; //!
+    
     if (filter) {
-        printf("----- Using filter\n");
+        printf("----- Filter is used\n");
     } else {
         origins_mem_size = graph_info_.edge_num * 2;
         queue_mem_size = graph_info_.edge_num * 2;
-        printf("----- Do not use filter\n");
+        printf("----- Filter isn't used\n");
     }
 
     int queue_size = 1;

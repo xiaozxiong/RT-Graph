@@ -133,12 +133,18 @@ private:
 
 public:
     RTBFS_V2(Graph &graph, int chunck_length, int digit = 2);
+
     ~RTBFS_V2();
+
     void SetDevice(int device_id = 0);
+
     void OptiXSetup();
     // void PrepareRT();
     void BuildAccel(bool if_compact = false);
-    void Traversal(int source_node = 0);
+
+    void Traversal(int source_node = 0, bool filter = true);
+
     void CheckResult();
+
     void PrintResult(int head = 40);
 };
