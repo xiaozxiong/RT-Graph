@@ -1,0 +1,31 @@
+.vscode/
+
+# ======
+bfs/bin/
+bfs/build/
+bfs/dataset/
+bfs/lib/
+*.log
+*.csv
+*.out
+
+# ======
+tc/
+tc/build
+tc/bin
+tc/lib
+tc/dataset
+# =====
+rt_search/
+rt_search/build/
+rt_search/bin/
+rt_search/output/
+
+# =====
+list-intersection/
+list-intersection/build
+list-intersection/bin
+list-intersection/output
+list-intersection/dataset
+list-intersection/ext/fmt
+
