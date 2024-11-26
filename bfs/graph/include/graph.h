@@ -27,12 +27,19 @@ class Graph{
 
 public:
     Graph();
+
     ~Graph();
+
     void ReadMtx(const std::string& file_path);
 
+    void Mtx2Parlay(const std::string &mtx_file, const std::string &par_file);
+
     graph_info_t GetGraphInfo();
+
     int *GetOffsets();
+    
     int *GetAdjs();
+    
     double *GetEdgeWeights();
 
 private:

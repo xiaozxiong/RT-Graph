@@ -1,7 +1,10 @@
 #include "include/graph.h"
 #include "mmio/mmio.h"
-#include <iostream>
 
+#include <iostream>
+#include <fstream>
+#include <algorithm>
+#include <assert.h>
 
 Graph::Graph(){
 
@@ -184,4 +187,55 @@ int* Graph::GetAdjs(){
 
 double* Graph::GetEdgeWeights(){
     return weights_.data();
+}
+
+//* the result should be a directed graph, the input is an undirected graph
+void Graph::Mtx2Parlay(const std::string &mtx_file, const std::string &par_file){
+    ReadMtx(mtx_file);
+
+    printf("Mtx file (directed): (%d, %d)\n", node_num_, edge_num_ / 2);
+
+    std::vector<int> new_degrees(node_num_);
+    int degree_sum = 0;
+    for(int i = 0; i < node_num_; i++){
+        int start = offsets_[i];
+        int end = offsets_[i + 1];
+
+        new_degrees [i] = 0;
+        for(int j = start; j < end; j++){
+            if(i < adjs_[j]) new_degrees[i] += 1; // smaller id -> larger id
+            else adjs_[j]  = node_num_;
+        }
+        degree_sum += new_degrees[i];
+    }
+    assert(degree_sum == edge_num_/2);
+
+    std::ofstream outFile(par_file);
+    // Write metadata
+    outFile << node_num_ << " " << edge_num_/2 << "\n";
+
+    // Write vertex degrees
+    for (int i = 0; i < node_num_; i++) {
+        outFile << new_degrees[i] << " ";
+    }
+    outFile << "\n";
+
+    // Write edges
+    for(int i = 0; i < node_num_; i++){
+        int start = offsets_[i];
+        int end = offsets_[i + 1];
+        std::sort(adjs_.data() + start, adjs_.data() + end);
+
+        if(new_degrees[i] > 0){
+            outFile << adjs_[start] << " ";
+        }
+        for(int j = 1; j < new_degrees[i]; j++){
+            outFile << (adjs_[start + j] - adjs_[ start + j - 1]) << " ";
+        }
+    }
+    
+    outFile << "\n";
+
+    outFile.close();
+    std::cout << "Graph file for parlaylib generated successfully!" << std::endl;
 }

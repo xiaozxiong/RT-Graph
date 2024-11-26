@@ -10,11 +10,13 @@ bfs/lib/
 *.out
 
 # ======
-tc/
 tc/build
 tc/bin
 tc/lib
 tc/dataset
+tc/*.out
+tc/*.png
+
 # =====
 rt_search/
 rt_search/build/
