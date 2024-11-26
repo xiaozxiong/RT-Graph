@@ -13,7 +13,7 @@ bfs/lib/
 tc/build
 tc/bin
 tc/lib
-tc/dataset
+tc/dataset/
 tc/*.out
 tc/*.png
 
