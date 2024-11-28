@@ -311,13 +311,14 @@ void CountOnGPU(int *adjs, int *offsets, int nodes, int edges, int device_id) {
     blocks = (blocks <= MAX_BLOCKS ? blocks : MAX_BLOCKS);
 
     GPUTimer gpu_timer;
-    // CPUTimer cpu_timer;
-    // cpu_timer.StartTiming();
+    CPUTimer cpu_timer;
+    cpu_timer.StartTiming();
     gpu_timer.StartTiming();
     ListIntersectionKernel<<<blocks, block_size>>>(d_adjs, d_offsets, nodes, edges, d_count);
     gpu_timer.StopTiming();
-    // cpu_timer.StopTiming();
-    // printf("cpu time = %f ms\n", cpu_timer.GetElapsedTime());
+    cudaDeviceSynchronize();
+    cpu_timer.StopTiming();
+    printf("cpu timing = %f ms\n", cpu_timer.GetElapsedTime());
     count_time = gpu_timer.GetElapsedTime();
 #endif
 #elif RTTC_METHOD == 1

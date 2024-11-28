@@ -12,7 +12,7 @@ int main(int argc, char *argv[]){
     std::string txt_file = argv[1];
     std::string bin_file = argv[2];
     
-    //  graph_convertor;
+    // edge list in text format -> edge list in binary format
     Graph::Txt2Bin(txt_file, bin_file);
 
     return 0;
