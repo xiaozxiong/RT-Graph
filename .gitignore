@@ -1,5 +1,7 @@
 .vscode/
 
+powerlaw_graph
+
 # ======
 bfs/bin/
 bfs/build/
@@ -14,6 +16,7 @@ tc/build
 tc/bin
 tc/lib
 tc/dataset/
+tc/output/img
 tc/*.out
 tc/*.png
 

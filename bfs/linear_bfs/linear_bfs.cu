@@ -269,8 +269,8 @@ double LinearBFS(const int *adjs, const int *offsets, int nodes, int edges, int 
     int new_queue_mem_size = new_nodes + 1;
     int old_queue_mem_size = nodes + 1;
     if (!filter) { // prevent out-of-bounds access
-        new_queue_mem_size = edges * 2;
-        old_queue_mem_size = edges * 2;
+        new_queue_mem_size = edges * 3;
+        old_queue_mem_size = edges * 3;
     }
     // store new nodes after mapping:
     CUDA_CHECK(cudaMalloc((void **)&d_new_queue,

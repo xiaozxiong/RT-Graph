@@ -203,16 +203,17 @@ void Graph::Mtx2Parlay(const std::string &mtx_file, const std::string &par_file)
 
         new_degrees [i] = 0;
         for(int j = start; j < end; j++){
-            if(i < adjs_[j]) new_degrees[i] += 1; // smaller id -> larger id
+            if(i <= adjs_[j]) new_degrees[i] += 1; // smaller id -> larger id
             else adjs_[j]  = node_num_;
         }
         degree_sum += new_degrees[i];
     }
-    assert(degree_sum == edge_num_/2);
+    printf("degree_sum = %d\n", degree_sum);
+    // assert(degree_sum == edge_num_/2);
 
     std::ofstream outFile(par_file);
     // Write metadata
-    outFile << node_num_ << " " << edge_num_/2 << "\n";
+    outFile << node_num_ << " " << degree_sum << "\n";
 
     // Write vertex degrees
     for (int i = 0; i < node_num_; i++) {

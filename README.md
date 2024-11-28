@@ -8,7 +8,7 @@
 
 ### Build
 
-Download OptiX7.5 SDK from [NVIDIA OptiX™ Legacy Downloads](https://developer.nvidia.com/designworks/optix/downloads/legacy) and set a enviromental variable `OptiX_INSTALL_DIR` which refers to the include directory of OptiX.
+Download OptiX7.5 SDK from [NVIDIA OptiX™ Legacy Downloads](https://developer.nvidia.com/designworks/optix/downloads/legacy) and set an enviromental variable `OptiX_INSTALL_DIR` which refers to the include directory of OptiX.
 ```bash
 export OptiX_INSTALL_DIR=/home/xzx/OptiX7.5/include
 ```

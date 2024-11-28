@@ -410,8 +410,8 @@ void RTBFS::Traversal(int source_node, bool filter) {
     if (filter) {
         printf("----- Filter is used\n");
     } else {
-        origins_mem_size = graph_info_.edge_num * 2;
-        queue_mem_size = graph_info_.edge_num * 2;
+        origins_mem_size = graph_info_.edge_num * 3;
+        queue_mem_size = graph_info_.edge_num * 3;
         printf("----- Filter isn't used\n");
     }
 
