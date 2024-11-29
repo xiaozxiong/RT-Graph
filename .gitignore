@@ -21,16 +21,12 @@ tc/*.out
 tc/*.png
 
 # =====
-# rt_search/
 rt_search/build/
 rt_search/bin/
-# rt_search/output/
 
 # =====
-list-intersection/
 list-intersection/build
-list-intersection/bin
 list-intersection/output
 list-intersection/dataset
-list-intersection/ext/fmt
+list-intersection/ext/
 
