@@ -21,10 +21,10 @@ tc/*.out
 tc/*.png
 
 # =====
-rt_search/
+# rt_search/
 rt_search/build/
 rt_search/bin/
-rt_search/output/
+# rt_search/output/
 
 # =====
 list-intersection/

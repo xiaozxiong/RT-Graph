@@ -1,0 +1,308 @@
+=====>>> 2^0:
+data size = 1, query size = 16777216, distribution = uniform
+data size = 1
+cpu sort time = 0.002 ms
+Sorting time = 2.000000 ms, Binary search time = 0.100352 ms, Total time = 2.100352 ms
+primitive type = triangle
+BVH Building Time = 0.087040 ms
+RT Search Time = 0.686080 ms
+BS: Wrong = 1526111
+RT: Wrong = 1526111
+
+=====>>> 2^1:
+data size = 2, query size = 16777216, distribution = uniform
+data size = 2
+cpu sort time = 0.002 ms
+Sorting time = 2.000000 ms, Binary search time = 0.100352 ms, Total time = 2.100352 ms
+primitive type = triangle
+BVH Building Time = 0.103424 ms
+RT Search Time = 0.688128 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^2:
+data size = 4, query size = 16777216, distribution = uniform
+data size = 4
+cpu sort time = 0.002 ms
+Sorting time = 2.000000 ms, Binary search time = 0.101376 ms, Total time = 2.101376 ms
+primitive type = triangle
+BVH Building Time = 0.095232 ms
+RT Search Time = 0.687104 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^3:
+data size = 8, query size = 16777216, distribution = uniform
+data size = 8
+cpu sort time = 0.002 ms
+Sorting time = 2.000000 ms, Binary search time = 0.102400 ms, Total time = 2.102400 ms
+primitive type = triangle
+BVH Building Time = 0.100352 ms
+RT Search Time = 0.687104 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^4:
+data size = 16, query size = 16777216, distribution = uniform
+data size = 16
+cpu sort time = 0.003 ms
+Sorting time = 2.000000 ms, Binary search time = 0.105472 ms, Total time = 2.105472 ms
+primitive type = triangle
+BVH Building Time = 0.108544 ms
+RT Search Time = 0.687104 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^5:
+data size = 32, query size = 16777216, distribution = uniform
+data size = 32
+cpu sort time = 0.004 ms
+Sorting time = 2.000000 ms, Binary search time = 0.108544 ms, Total time = 2.108544 ms
+primitive type = triangle
+BVH Building Time = 0.123904 ms
+RT Search Time = 0.688128 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^6:
+data size = 64, query size = 16777216, distribution = uniform
+data size = 64
+cpu sort time = 0.004 ms
+Sorting time = 2.000000 ms, Binary search time = 0.111616 ms, Total time = 2.111616 ms
+primitive type = triangle
+BVH Building Time = 0.141312 ms
+RT Search Time = 0.689152 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^7:
+data size = 128, query size = 16777216, distribution = uniform
+data size = 128
+cpu sort time = 0.006 ms
+Sorting time = 2.000000 ms, Binary search time = 0.115712 ms, Total time = 2.115712 ms
+primitive type = triangle
+BVH Building Time = 0.140288 ms
+RT Search Time = 0.695296 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^8:
+data size = 256, query size = 16777216, distribution = uniform
+data size = 256
+cpu sort time = 0.013 ms
+Sorting time = 2.000000 ms, Binary search time = 0.121856 ms, Total time = 2.121856 ms
+primitive type = triangle
+BVH Building Time = 0.158720 ms
+RT Search Time = 0.694272 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^9:
+data size = 512, query size = 16777216, distribution = uniform
+data size = 512
+cpu sort time = 0.026 ms
+Sorting time = 2.000000 ms, Binary search time = 0.137216 ms, Total time = 2.137216 ms
+primitive type = triangle
+BVH Building Time = 0.174080 ms
+RT Search Time = 0.700416 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^10:
+data size = 1024, query size = 16777216, distribution = uniform
+data size = 1024
+cpu sort time = 0.054 ms
+Sorting time = 2.000000 ms, Binary search time = 0.171008 ms, Total time = 2.171008 ms
+primitive type = triangle
+BVH Building Time = 0.237568 ms
+RT Search Time = 0.705536 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^11:
+data size = 2048, query size = 16777216, distribution = uniform
+data size = 2048
+cpu sort time = 0.114 ms
+Sorting time = 2.000000 ms, Binary search time = 0.219136 ms, Total time = 2.219136 ms
+primitive type = triangle
+BVH Building Time = 0.277504 ms
+RT Search Time = 0.715776 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^12:
+data size = 4096, query size = 16777216, distribution = uniform
+data size = 4096
+cpu sort time = 0.241 ms
+Sorting time = 2.000000 ms, Binary search time = 0.274432 ms, Total time = 2.274432 ms
+primitive type = triangle
+BVH Building Time = 0.296960 ms
+RT Search Time = 0.727040 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^13:
+data size = 8192, query size = 16777216, distribution = uniform
+data size = 8192
+cpu sort time = 0.504 ms
+Sorting time = 2.000000 ms, Binary search time = 0.328704 ms, Total time = 2.328704 ms
+primitive type = triangle
+BVH Building Time = 0.330752 ms
+RT Search Time = 0.739328 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^14:
+data size = 16384, query size = 16777216, distribution = uniform
+data size = 16384
+cpu sort time = 1.122 ms
+Sorting time = 2.000000 ms, Binary search time = 0.384000 ms, Total time = 2.384000 ms
+primitive type = triangle
+BVH Building Time = 0.344064 ms
+RT Search Time = 0.750592 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^15:
+data size = 32768, query size = 16777216, distribution = uniform
+data size = 32768
+cpu sort time = 2.327 ms
+Sorting time = 2.000000 ms, Binary search time = 0.486400 ms, Total time = 2.486400 ms
+primitive type = triangle
+BVH Building Time = 0.366592 ms
+RT Search Time = 0.769024 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^16:
+data size = 65536, query size = 16777216, distribution = uniform
+data size = 65536
+cpu sort time = 4.901 ms
+Sorting time = 2.000000 ms, Binary search time = 1.178624 ms, Total time = 3.178624 ms
+primitive type = triangle
+BVH Building Time = 0.439296 ms
+RT Search Time = 0.794624 ms
+BS: Accepted
+RT: Wrong = 70
+
+=====>>> 2^17:
+data size = 131072, query size = 16777216, distribution = uniform
+data size = 131072
+cpu sort time = 10.314 ms
+Sorting time = 2.000000 ms, Binary search time = 1.874944 ms, Total time = 3.874944 ms
+primitive type = triangle
+BVH Building Time = 0.530432 ms
+RT Search Time = 0.834560 ms
+BS: Accepted
+RT: Wrong = 48
+
+=====>>> 2^18:
+data size = 262144, query size = 16777216, distribution = uniform
+data size = 262144
+cpu sort time = 21.716 ms
+Sorting time = 2.000000 ms, Binary search time = 2.204672 ms, Total time = 4.204672 ms
+primitive type = triangle
+BVH Building Time = 0.710656 ms
+RT Search Time = 0.958464 ms
+BS: Accepted
+RT: Wrong = 63
+
+=====>>> 2^19:
+data size = 524288, query size = 16777216, distribution = uniform
+data size = 524288
+cpu sort time = 45.559 ms
+Sorting time = 2.000000 ms, Binary search time = 2.426880 ms, Total time = 4.426880 ms
+primitive type = triangle
+BVH Building Time = 1.074176 ms
+RT Search Time = 1.106944 ms
+BS: Accepted
+RT: Wrong = 50
+
+=====>>> 2^20:
+data size = 1048576, query size = 16777216, distribution = uniform
+data size = 1048576
+cpu sort time = 96.497 ms
+Sorting time = 2.000000 ms, Binary search time = 2.560000 ms, Total time = 4.560000 ms
+primitive type = triangle
+BVH Building Time = 2.086912 ms
+RT Search Time = 1.334272 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^21:
+data size = 2097152, query size = 16777216, distribution = uniform
+data size = 2097152
+cpu sort time = 198.847 ms
+Sorting time = 2.000000 ms, Binary search time = 3.129344 ms, Total time = 5.129344 ms
+primitive type = triangle
+BVH Building Time = 3.921920 ms
+RT Search Time = 1.502208 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^22:
+data size = 4194304, query size = 16777216, distribution = uniform
+data size = 4194304
+cpu sort time = 420.159 ms
+Sorting time = 2.000000 ms, Binary search time = 3.495936 ms, Total time = 5.495936 ms
+primitive type = triangle
+BVH Building Time = 8.291328 ms
+RT Search Time = 1.642496 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^23:
+data size = 8388608, query size = 16777216, distribution = uniform
+data size = 8388608
+cpu sort time = 882.889 ms
+Sorting time = 2.000000 ms, Binary search time = 3.535872 ms, Total time = 5.535872 ms
+primitive type = triangle
+BVH Building Time = 16.884735 ms
+RT Search Time = 1.806336 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^24:
+data size = 16777216, query size = 16777216, distribution = uniform
+data size = 16777216
+cpu sort time = 1831.823 ms
+Sorting time = 3.000000 ms, Binary search time = 6.573056 ms, Total time = 9.573056 ms
+primitive type = triangle
+BVH Building Time = 34.622463 ms
+RT Search Time = 2.281472 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^25:
+data size = 33554432, query size = 16777216, distribution = uniform
+data size = 33554432
+cpu sort time = 3851.823 ms
+Sorting time = 3.000000 ms, Binary search time = 9.268224 ms, Total time = 12.268224 ms
+primitive type = triangle
+BVH Building Time = 62.055424 ms
+RT Search Time = 2.968576 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^26:
+data size = 67108864, query size = 16777216, distribution = uniform
+data size = 67108864
+cpu sort time = 8038.802 ms
+Sorting time = 5.000000 ms, Binary search time = 12.684288 ms, Total time = 17.684288 ms
+primitive type = triangle
+BVH Building Time = 122.494972 ms
+RT Search Time = 4.012032 ms
+BS: Accepted
+RT: Accepted
+
+=====>>> 2^27:
+data size = 134217728, query size = 16777216, distribution = uniform
+data size = 134217728
+cpu sort time = 16622.618 ms
+Sorting time = 18.000000 ms, Binary search time = 15.576064 ms, Total time = 33.576064 ms
+primitive type = triangle
+BVH Building Time = 251.375610 ms
+RT Search Time = 4.677632 ms
+BS: Accepted
+RT: Accepted
+

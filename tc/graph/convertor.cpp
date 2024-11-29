@@ -5,7 +5,7 @@
 int main(int argc, char *argv[]){
 
     if(argc != 3){
-        printf("Usage: ./bin/convertor txt_file bin_file");
+        printf("Usage: ./bin/convertor txt_file bin_file\n");
         exit(1);
     }
 

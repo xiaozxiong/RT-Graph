@@ -36,7 +36,7 @@ def powerlaw_graph(n, m, p):
 
 if __name__ == "__main__":
     n = 2000000  # Number of nodes
-    m = 8     # Number of edges to attach from a new node
+    m = 10     # Number of edges to attach from a new node
     # Probability of forming a triangle [0, 1]
     # for p in np.arange(0.1, 1, 0.1):
     #     powerlaw_graph(n, m, p)
