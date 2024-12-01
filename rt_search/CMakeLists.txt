@@ -37,7 +37,7 @@ cuda_compile_and_embed(embedded_ptx_code DevicePrograms.cu)
 
 # add_executable(rt_search
 #     ${embedded_ptx_code}
-#     main.cpp
+#     search.cpp
 #     RTBase.cpp
 #     simple_bs.cu
 # )
@@ -93,7 +93,7 @@ target_compile_options(measure PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:
     -Xcompiler=-fopenmp
     -std=c++14
     -gencode arch=compute_75,code=sm_75
-    -lineinfo
+    -lineinfo # nsight
 >)
 
 target_link_libraries(measure

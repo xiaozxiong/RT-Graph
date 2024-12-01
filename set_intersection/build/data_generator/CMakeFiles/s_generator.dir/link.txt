@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/s_generator.dir/s_generator.cpp.o CMakeFiles/s_generator.dir/data.cpp.o -o ../bin/s_generator
