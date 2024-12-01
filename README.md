@@ -12,13 +12,13 @@ Download OptiX7.5 SDK from [NVIDIA OptiX™ Legacy Downloads](https://developer.
 ```bash
 export OptiX_INSTALL_DIR=/home/xzx/OptiX7.5/include
 ```
+
 Then you can enter a diretory (e.g., bfs) and run the following commands:
 ```shell
 cmake -B build
 cd build
 make -j
 ```
-
 
 ## Breadth First Search (BFS)
 ### Dataset
@@ -55,8 +55,7 @@ All datasets can be downloaded from [Stanford Large Network Dataset Collection](
 
 ## Set Intersection
 
-The comparasion is based on the synthsized datasets which can be generatd with data generator tool.
-
+The comparasion is based on the synthsized datasets which can be generatd with data generator tool. 
 
 ## Search Performance
 Run `run_measure.py` to get the comparation results between RT-based search and CUDA-based search under different condition.
