@@ -55,9 +55,15 @@ All datasets can be downloaded from [Stanford Large Network Dataset Collection](
 
 ## Set Intersection
 
+The comparasion is based on the synthsized datasets which can be generatd with data generator tool.
 
 
 ## Search Performance
-
-
-
+Run `run_measure.py` to get the comparation results between RT-based search and CUDA-based search under different condition.
+```shell
+./run_measure.py
+```
+Run `run_profile.sh` to use Nsight Compute for profiling.
+```
+./run_profile.sh
+```

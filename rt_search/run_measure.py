@@ -3,9 +3,9 @@ import os
 os.chdir("./bin")
 
 # q = 2 ^ 24
-# for i in range(0,28,1):
-#     data_size = (1<<i)
-#     os.system("./measure -d "+str(data_size)+" --device 3")
+for i in range(0,28,1):
+    data_size = (1<<i)
+    os.system("./measure -d "+str(data_size)+" --device 3")
 
 # q = 2 ^ 16
 for i in range(0,28,1):
