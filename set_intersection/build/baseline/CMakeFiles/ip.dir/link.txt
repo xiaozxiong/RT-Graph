@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/ip.dir/ip.cu.o CMakeFiles/ip.dir/__/utils/util.cpp.o -o ../bin/ip   -L/usr/local/cuda-11.8/targets/x86_64-linux/lib/stubs  -L/usr/local/cuda-11.8/targets/x86_64-linux/lib  /usr/local/cuda-11.8/lib64/libcudart_static.a -ldl /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libcuda.so -lcudadevrt -lcudart_static -lrt -lpthread -ldl
