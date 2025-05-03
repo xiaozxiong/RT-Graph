@@ -1,4 +1,4 @@
-# RT or Not: Can We Accelerate Graph Algorithms with Ray Tracing Cores?
+# A Case Study for Ray Tracing Cores: Performance Insights with Breadth-First Search and Triangle Counting in Graphs (SIGMETRICS'25)
 
 ## Getting Started
 ### Prerequisites
